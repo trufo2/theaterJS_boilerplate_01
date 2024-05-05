@@ -1,6 +1,6 @@
 {
     "name": "Node.js LTS",
-    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-lts",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:20.12.2",
     "settings": {
       "terminal.integrated.shell.linux": "/bin/bash"
     },
