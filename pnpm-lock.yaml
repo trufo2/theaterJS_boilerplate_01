@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@theatre/core':
+        specifier: ^0.7.1
+        version: 0.7.1
+      '@theatre/studio':
+        specifier: ^0.7.1
+        version: 0.7.1(@theatre/core@0.7.1)
       three:
         specifier: ^0.164.1
         version: 0.164.1
@@ -236,6 +242,17 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@theatre/core@0.7.1':
+    resolution: {integrity: sha512-745IbKZURz5TlG9QQqtq3TClTlH2kfc1ZhIwP6sh4JAJW/XR4r5KEC2mZx0q2izWDLKMAz4ZrIs8URIdM6Km1w==}
+
+  '@theatre/dataverse@0.7.1':
+    resolution: {integrity: sha512-cl/uVuXQTYVfcdbBX/GYrZNNpJsvbXEwRaFHUj5zEnyLBuJMO+xCDl9bfRx6Sysdr6HcGJvFuekP0gdmTWK+bA==}
+
+  '@theatre/studio@0.7.1':
+    resolution: {integrity: sha512-e2Of4XRjbq9ytyvYuC3pqn6QYTrOt3dRLTzzUFCMAefIIqbBN/mPUVtZElTDjHbTyNZMTRupRnL9AizAK7Afzw==}
+    peerDependencies:
+      '@theatre/core': '*'
+
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
 
@@ -248,6 +265,9 @@ packages:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+
+  lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
 
   nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
@@ -420,6 +440,19 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.17.2':
     optional: true
 
+  '@theatre/core@0.7.1':
+    dependencies:
+      '@theatre/dataverse': 0.7.1
+
+  '@theatre/dataverse@0.7.1':
+    dependencies:
+      lodash-es: 4.17.21
+
+  '@theatre/studio@0.7.1(@theatre/core@0.7.1)':
+    dependencies:
+      '@theatre/core': 0.7.1
+      '@theatre/dataverse': 0.7.1
+
   '@types/estree@1.0.5': {}
 
   esbuild@0.20.2:
@@ -450,6 +483,8 @@ snapshots:
 
   fsevents@2.3.3:
     optional: true
+
+  lodash-es@4.17.21: {}
 
   nanoid@3.3.7: {}
 
