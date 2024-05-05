@@ -1,0 +1,13 @@
+{
+    "name": "Node.js LTS",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-lts",
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+      "dbaeumer.vscode-eslint"
+    ],
+    "forwardPorts": [],
+    "postCreateCommand": "npm install",
+    "remoteUser": "node"
+}
